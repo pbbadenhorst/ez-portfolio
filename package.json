@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "An EZ investment portfolio management application",
   "main": "src/index.js",
+  "engines": {
+    "node": "10.14.1"
+  },
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
