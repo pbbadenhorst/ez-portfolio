@@ -2,13 +2,8 @@
   "name": "ez-portfolio-github",
   "version": "0.0.1",
   "description": "An EZ investment portfolio management application",
-  "main": "src/index.js",
   "engines": {
     "node": "10.14.1"
-  },
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,9 +11,18 @@
   },
   "keywords": [],
   "author": "Bernard Badenhorst",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pbbadenhorst/ez-portfolio/issues"
   },
-  "homepage": "https://github.com/pbbadenhorst/ez-portfolio#readme"
+  "homepage": "https://github.com/pbbadenhorst/ez-portfolio#readme",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {},
+  "license": "MIT"
 }
