@@ -2,9 +2,6 @@
   "name": "ez-portfolio-github",
   "version": "0.0.1",
   "description": "An EZ investment portfolio management application",
-  "engines": {
-    "node": "10.14.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pbbadenhorst/ez-portfolio.git"
