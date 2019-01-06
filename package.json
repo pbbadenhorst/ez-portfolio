@@ -17,9 +17,7 @@
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "sqlite3": "^4.0.4"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "license": "MIT"
 }
