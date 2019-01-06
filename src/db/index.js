@@ -1,5 +1,6 @@
 const sqlite = require('sqlite')
 const path = require('path')
+const log = require('../log').createLogger('[Database]')
 
 module.exports = function(options) {
 
@@ -13,16 +14,19 @@ module.exports = function(options) {
 
   return Promise.resolve()
     .then(() => {
+      log.info(`Opening connection: ${databasePath}`)
       return sqlite.open(databasePath)
     })
     .then((db) => {
       if (migrate) {
+        log.info(`Performing migrations from: ${migrationsPath}`)
         return db.migrate({ force, migrationsPath })
       } else {
         return db
       }
     })
     .then((db) => {
+      log.info(`Connection open.`)
       return db
     })
 }

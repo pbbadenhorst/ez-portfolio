@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "simple-node-logger": "^18.12.21",
     "sqlite": "^3.0.0"
   },
   "devDependencies": {},
