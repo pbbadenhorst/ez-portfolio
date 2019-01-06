@@ -1,12 +1,20 @@
 const logger =  require('simple-node-logger')
 const path = require('path')
+const fs = require('fs')
 
 function createManager() {
   const manager = logger.createLogManager();
 
+  // Create directory if missing
+  const logDirectory = path.resolve(__dirname, '..', 'logs')
+  if (!fs.existsSync(logDirectory)) {
+    fs.mkdirSync(logDirectory)
+  }
+
+  // Setup rolling file logging
   manager.createRollingFileAppender({
-    logDirectory: path.resolve(__dirname, '..', 'logs'),
-    fileNamePattern:'node-<DATE>.log',
+    logDirectory,
+    fileNamePattern:'www-<DATE>.log',
     dateFormat:'YYYY.MM.DD'
   })
 
